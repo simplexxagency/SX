@@ -1,0 +1,109 @@
+.flex-wrp {
+    display: flex;
+    align-items: flex-end;
+
+}
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+    padding-top: 44px;
+    padding-bottom: 22px;
+    background-color: $black;
+    color: #fff;
+    @include calc-width(padding-right, 60);
+    @include calc-width(padding-left, 60);
+    border-bottom: 1px solid transparent;
+    .logo-black {
+        display: none;
+    }
+    .burger {
+        width: 30px;
+        height: 19px;
+        position: relative;
+        margin-left: 15px;
+        display: none;
+        transition: all .5s;
+        cursor: pointer;
+        span, &::before, &::after {
+            position: absolute;
+            background-color: #fff;
+            width: 100%;
+            height: 3px;
+            left: 0;
+        }
+        span {
+            top: 8px;
+        }
+        &::before {
+            content: '';
+            top: 0;
+        }
+        &::after {
+            content: '';
+            bottom: 0;
+        }
+    }
+    &.header-scrolled {
+        padding-top: 22px;
+        border-color: #212121;
+        top: -90px;
+        .header-scroll-list {
+            display: inline-block;
+        }
+        .burger {
+            -webkit-display: block;
+            -moz-display: block;
+            -ms-display: block;
+            -o-display: block;
+            display: block;
+        }
+        .header-fix-list {
+            display: none;
+        }
+        &.header-show-scrolled {
+            top: 0;
+        }
+    }
+    .header-scroll-list {
+        display: none;
+    }
+    .header-fix-list {
+        display: inline-block;
+    }
+}
+.nav-list {
+    display: flex;
+    li {
+        font-size: 24px;
+        & + li {
+            margin-left: 50px;
+        }
+    }
+
+}
+body.light {
+    header {
+        background-color: #fff;
+        color: $black;
+        .logo-white {
+            display: none;
+        }
+        .logo-black {
+            display: block;
+        }
+        &.header-scrolled {
+            border-color: #dcdcdc;
+        }
+        .burger {
+            span, &::before, &::after {
+                background-color: $black;
+            }
+        }
+    }
+}

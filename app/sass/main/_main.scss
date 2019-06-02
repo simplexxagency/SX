@@ -1,0 +1,468 @@
+main {
+    // height: 5000px;
+}
+// PROGRESS BAR
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: transparent;
+    z-index: 5;
+}
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: $violet;
+}
+// PROGRESS BAR END
+.main-screen {
+    position: relative;
+}
+.mouse {
+    width: 25px;
+    position: absolute;
+    bottom: 45px;
+    @include calc-width(left, 60);
+}
+.mouse-icon {
+    display: block;
+    width: 25px;
+    height: 45px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+.mouse-wheel {
+    height: 15px;
+    margin: 2px auto 0;
+    display: block;
+    width: 15px;
+    background-color: $yellow;
+    border-radius: 50%;
+    animation: 2s cubic-bezier(.37,.01,0,.98) infinite wheel-up-down;
+}
+@keyframes wheel-up-down {
+    0% {
+        margin-top: -70px;
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1);
+     }
+    100% {
+        margin-top: 35px;
+        opacity: 0;
+    }
+}
+
+
+.main-decor-block {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 45px;
+    @include calc-width(right, 60);
+}
+.main-decor-block-text {
+    margin-right: 30px;
+    text-align: right;
+    .decor-text {
+        line-height: 26px;
+    }
+}
+.decor-text {
+    font-size: 12px;
+    letter-spacing: 3.6px;
+    color: $darkGray;
+    text-transform: uppercase;
+}
+body.light {
+    .decor-text {
+        color: $lightGray;
+    }
+}
+.tumbler {
+    position: fixed;
+    z-index: 2;
+    top: calc(50% - 10px);
+    @include calc-width(right, 60);
+    font-family: 'FuturaPT-Book';
+    font-size: 16px;
+    transform: rotate(90deg);
+    margin-right: -43px;
+    span {
+        cursor: pointer;
+    }
+    .light-on {
+        color: $gray;
+    }
+    .dark-on {
+        color: $yellow;
+    }
+}
+body.light {
+    .tumbler {
+        .dark-on {
+            color: $black;
+        }
+    }
+}
+.main-screen {
+    height: 100vh;
+    h1 {
+        margin-top: -17px;
+        margin-bottom: 75px;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+.btn-discuss {
+    @extend %BTN;
+}
+body.light {
+    .btn-discuss {
+        color: $black;
+    }
+}
+
+.second-screen {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+}
+
+.fixed-top-block {
+    @include calc-height(margin-top, -200);
+    @include calc-height(margin-bottom, 100);
+}
+.gallery-scroll-track {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+.gallery-container {
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.second-screen-h2 {
+    margin-bottom: 18px;
+}
+.fixed-top-block-text {
+    font-family: 'FuturaPT-Book';
+    font-size: 22px;
+    span {
+        color: $yellow;
+    }
+}
+.horizontal-scroll-wrapper {
+    position: relative;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    transform: translate3d(0px, 0px, 0px);
+    div {
+        position: relative;
+        flex: 0 0 auto;
+        &.promo-1 {
+            p {
+                padding-left: calc(49vw - 214px);
+                padding-right: 266px;
+                font-size: 54px;
+                font-family: 'FuturaPT-Heavy';
+                line-height: 40px;
+            }
+        }
+        &.promo-2 {
+            padding-right: 213px;
+        }
+        &.promo-3 {
+            padding-right: 284px;
+        }
+        &.promo-4 {
+            padding-right: 381px;
+            p {
+                font-size: 54px;
+                font-family: 'FuturaPT-Heavy';
+                line-height: 65px;
+                span {
+                    color: $yellow;
+                }
+            }
+            .face {
+                bottom: -176px;
+            }
+        }
+    }
+    .promo-subtitle {
+        font-family: 'FuturaPT-Demi';
+        font-size: 34px;
+        margin-bottom: 46px;
+    }
+    .promo-list {
+        li {
+            font-size: 22px;
+            font-family: 'FuturaPT-Book';
+            span {
+                font-family: 'FuturaPT-Demi';
+                font-size: 34px;
+                &.color {
+                    color: $yellow;
+                }
+            }
+            & + li {
+                margin-top: 18px;
+            }
+        }
+    }
+}
+.face {
+    width: 77px;
+    height: 77px;
+    position: absolute;
+    left: 120px;
+    bottom: -130px;
+}
+// 3 screen
+.third-screen {
+    padding-top: 50px;
+    h2 {
+        margin-bottom: 32px;
+    }
+}
+.screen-text {
+    font-family: 'FuturaPT-Book';
+    font-size: 22px;
+    line-height: 31px;
+    width: 70%;
+    margin-bottom: 210px;
+}
+.third-screen-img-wrp {
+    text-align: center;
+    margin-bottom: 186px;
+}
+// 4 screen
+.title-top-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 95px;
+    .decor-text {
+        line-height: 64px;
+    }
+}
+.container-prev-text {
+    position: relative;
+    height: 515px;
+    margin-bottom: 50px;
+}
+.container-prev  {
+    position: relative;
+    width: 920px;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+}
+.prev-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all 1s;
+    transform: scale(1.03);
+    opacity: 0;
+    &.active {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+.container-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.link-wrp {
+    position: relative;
+    width: 33.33%;
+    height: 100%;
+}
+.link-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    text-align: center;
+    h4 {
+        position: relative;
+        font-size: 82px;
+        font-family: 'FuturaPT-Heavy';
+        text-shadow: 0 0 80px rgba(0,0,0,.2);
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        display: inline-block;
+        white-space: nowrap;
+        text-transform: uppercase;
+    }
+}
+body.light {
+    .link-prev {
+        h4 {
+            -webkit-text-stroke: 1px #000;
+        }
+    }
+    .hover-before::before {
+        color: #000;
+    }
+}
+.hover-before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+    text-align: right;
+    transition: all .7s cubic-bezier(.37,.01,0,.98);
+    &::before {
+        content: attr(data-text);
+        top: 0;
+        right: 0;
+        // width: 700px;
+        height: 100%;
+        float: right;
+        z-index: 2;
+        overflow: hidden;
+        text-align: right;
+        white-space: nowrap;
+        color: #fff;
+        text-shadow: 0 0 5px rgba(5,6,6,0);
+    }
+}
+.hover-active {
+    .hover-before  {
+        width: 100%;
+    }
+}
+.btn-center {
+    text-align: center;
+    margin-bottom: 184px;
+}
+.show-all-prevs {
+    @extend %BTN;
+}
+// 5 screen
+.fifth-screen {
+    h2 {
+        margin-bottom: 32px;
+    }
+    .screen-text {
+        margin-bottom: 93px;
+    }
+    .third-screen-img-wrp {
+        margin-bottom: 136px;
+    }
+}
+.fifth-screen-flex-wrp {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 193px;
+    h2 {
+        margin-bottom: 0;
+        margin-right: 55px;
+    }
+}
+// 6 screen
+.sixth-screen {
+    padding-top: 50px;
+    background-color: $black;
+    h2, .screen-text {
+        color: #fff;
+    }
+}
+.sixth-screen-flex-wrp {
+    padding: 0 95px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    .screen-text {
+        width: 570px;
+        margin-bottom: 0;
+    }
+}
+.boys-wrp {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+.boy {
+    position: relative;
+    padding-bottom: 55px;
+    &:last-child {
+        .about {
+            left: inherit;
+            right: 0;
+        }
+    }
+}
+.about {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.name {
+    font-family: 'FuturaPT-Book';
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.position {
+    font-family: 'FuturaPT-Demi';
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 29px;
+}
+.insta {
+    font-family: 'FuturaPT-Book';
+    font-size: 22px;
+    color: $darkGray;
+    display: inline-block;
+    &::before {
+        color: #fff;
+        content: "\f16d";
+        font-family: Font Awesome\ 5 Brands;
+        margin-right: 15px;
+    }
+    &:hover {
+        color: $darkGray;
+    }
+}

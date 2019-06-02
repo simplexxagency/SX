@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+input, textarea, select {
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent; }
+::-webkit-scrollbar-thumb {
+  width: 0;
+  background: transparent; }
+.btn-link:focus, .btn-link.focus {
+    text-decoration: none;
+}
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    line-height: inherit;
+}
+legend {margin-bottom: 0;}
+.btn:focus, .btn.focus {
+    box-shadow: none;
+}
+.app {
+    width: 100%;
+    // height: 100%;
+}
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+mark {
+    padding: 0;
+    display: block;
+    background-color: inherit;
+}
+
+*, *:focus {
+  outline: none;
+}
+*:before, *:after {
+  user-select: none;
+}
+input, textarea, input:before, textarea:before, input:after, textarea:after {
+  user-select: initial;
+}
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 0;
+  font-weight: normal;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+form {
+  margin: 0;
+}
+input[type="submit"] {
+  cursor: pointer;
+  border: none;
+}
+input {
+  border: none;
+}
+textarea {
+  resize: none;
+  border: none;
+  appearance: none;
+  overflow: auto;
+}
+::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+img {
+  max-width: 100%;
+  border: none;
+  height: auto;
+}
+label {
+  user-select: none;
+  margin: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  &:focus {
+      outline: none;
+  }
+}
+// reset bootstrap collapse
+.btn-link {
+    color: inherit;
+    border: none;
+    padding: 0;
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+.card-header {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: inherit;
+    border-bottom: 0;
+    &:first-child {
+        border-radius: 0;
+    }
+}
+.card-body {
+    padding: 0;
+}
+.card {
+    border: none;
+}

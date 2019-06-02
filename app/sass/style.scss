@@ -1,0 +1,52 @@
+@import "reset";
+@import "fonts";
+@import "variables";
+@import "custom";
+@import "header/header";
+@import "footer/footer";
+@import "main/main";
+@import "popUp/popUp";
+
+
+
+body {
+    position: relative;
+    font-family: 'FuturaPT-Medium';
+    font-size: 14px;
+    width: 100%;
+    transition: all .5s;
+    color: #ffffff;
+    background-color: $black;
+    &.compensate-for-scrollbar {
+        padding-right: 17px;
+        overflow: hidden;
+    }
+    &.overflow-hidden {
+        overflow: hidden;
+    }
+    &.light {
+        color: $black;
+        background-color: #fff;
+    }
+    
+}
+
+.padding-for-header {
+    padding-top: 148px;
+}
+.app {
+    position: relative;
+    // min-height: 100vh;
+    .pages-wrapper, .header-wrapper, .menu-wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .header-wrapper {
+        z-index: 3;
+    }
+    .pages-wrapper {
+        z-index: 2;
+    }
+}
+
+@import "media/media";
