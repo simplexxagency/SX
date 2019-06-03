@@ -131,7 +131,7 @@ body.light {
     @extend %BTN;
 }
 body.light {
-    .btn-discuss {
+    .btn-discuss, .show-all-prevs {
         color: $black;
     }
 }
@@ -257,7 +257,7 @@ body.light {
     width: 70%;
     margin-bottom: 210px;
 }
-.third-screen-img-wrp {
+.decor-img-wrp {
     text-align: center;
     margin-bottom: 186px;
 }
@@ -336,11 +336,17 @@ body.light {
 body.light {
     .link-prev {
         h4 {
-            -webkit-text-stroke: 1px #000;
+            -webkit-text-stroke: 1px $violet;
+            &.h4-center {
+                -webkit-text-stroke: 1px #fff;
+                .hover-before::before {
+                    color: #fff;
+                }
+            }
         }
     }
     .hover-before::before {
-        color: #000;
+        color: $violet;
     }
 }
 .hover-before {
@@ -357,7 +363,6 @@ body.light {
         content: attr(data-text);
         top: 0;
         right: 0;
-        // width: 700px;
         height: 100%;
         float: right;
         z-index: 2;
@@ -388,8 +393,8 @@ body.light {
     .screen-text {
         margin-bottom: 93px;
     }
-    .third-screen-img-wrp {
-        margin-bottom: 136px;
+    .decor-img-wrp {
+        margin-bottom: 100px;
     }
 }
 .fifth-screen-flex-wrp {
@@ -403,10 +408,15 @@ body.light {
 }
 // 6 screen
 .sixth-screen {
-    padding-top: 50px;
+    padding-top: 86px;
+    padding-bottom: 100px;
     background-color: $black;
     h2, .screen-text {
         color: #fff;
+    }
+    .decor-img-wrp {
+        margin-bottom: 0;
+        padding-bottom: 156px;
     }
 }
 .sixth-screen-flex-wrp {
@@ -422,7 +432,6 @@ body.light {
 .boys-wrp {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 200px;
 }
 .boy {
     position: relative;
@@ -464,5 +473,155 @@ body.light {
     }
     &:hover {
         color: $darkGray;
+    }
+}
+// 7 screen
+.seventh-screen {
+    padding-top: 100px;
+    .decor-text {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 200px;
+    }
+}
+.h2-center {
+    text-align: center;
+    margin-bottom: 47px;
+}
+.btn-discuss-2 {
+    @extend %BTN2;
+}
+.decor-img-wrp.last-section-decor-img-wrp {
+    margin-bottom: 64px;
+}
+// 8 screen contacts
+.eightth-screen {
+    padding-top: 86px;
+    padding-bottom: 164px;
+}
+.contacts-content {
+    position: relative;
+}
+.contacts-content-text {
+    width: 55%;
+    position: relative;
+    z-index: 2;
+}
+.contacts-intro {
+    font-family: 'FuturaPT-Demi';
+    font-size: 34px;
+    margin-bottom: 100px;
+}
+.messenger {
+    font-size: 22px;
+    font-family: 'FuturaPT-Book';
+    margin-bottom: 4px;
+}
+.contact-link {
+    display: block;
+    font-size: 54px;
+    font-family: 'FuturaPT-Heavy';
+    margin-bottom: 36px;
+}
+.write-me {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-in;
+    background-color: $yellow;
+    color: $black;
+    font-size: 54px;
+    font-family: 'FuturaPT-Heavy';
+    cursor: pointer;
+    &:hover {
+        background-color: #fff;
+    }
+}
+body.light {
+    .write-me {
+        &:hover {
+            background-color: $violet;
+            color: #fff;
+        }
+    }
+}
+.contacts-content-map {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    img {
+        width: 100%;
+    }
+}
+.dot {
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $yellow;
+    &.dot-1 {
+        top: 26.5%;
+        left: 55%;
+    }
+    &.dot-2 {
+        top: 32.39%;
+        left: 52.29%;
+    }
+    &.dot-3 {
+        top: 30.2%;
+        left: 53.92%;
+    }
+    &.dot-4 {
+        top: 34.56%;
+        left: 56.8%;
+    }
+    &.dot-5 {
+        top: 31.9%;
+        left: 57.2%;
+    }
+    &.dot-6 {
+        top: 28%;
+        left: 57.9%;
+    }
+    &.dot-7 {
+        top: 32.6%;
+        left: 55.45%;
+    }
+}
+.tooltip-inner {
+    background-color: #fff;
+    color: $black;
+}
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: #fff !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: #fff !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: #fff !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: #fff !important;
+}
+body.light {
+    .tooltip-inner {
+        background-color: $black;
+        color: #fff;
+    }
+    .tooltip.bs-tooltip-right .arrow:before {
+        border-right-color: $black !important;
+    }
+    .tooltip.bs-tooltip-left .arrow:before {
+        border-left-color: $black !important;
+    }
+    .tooltip.bs-tooltip-bottom .arrow:before {
+        border-bottom-color: $black !important;
+    }
+    .tooltip.bs-tooltip-top .arrow:before {
+        border-top-color: $black !important;
     }
 }

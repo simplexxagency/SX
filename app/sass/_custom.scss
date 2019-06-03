@@ -69,6 +69,31 @@ h2 {
         }
     }
 }
+%BTN2 {
+    width: 308px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 103px;
+    border: 6px solid $yellow;
+    cursor: pointer;
+    text-transform: lowercase;
+    background-color: transparent;
+    transition: all .26s ease;
+    span {
+        font-size: 28px;
+        font-family: 'FuturaPT-Heavy';
+        color: $yellow;
+        transition: all .26s ease;
+    }
+    &:hover {
+        background-color: $yellow;
+        span {
+            color: $black;
+        }
+    }
+}
 %input {
     border-style: solid;
     border-width: 1px;
