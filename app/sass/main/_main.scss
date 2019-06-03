@@ -1,5 +1,5 @@
-main {
-    // height: 5000px;
+.main-content-center {
+    width: 100%;
 }
 // PROGRESS BAR
 .progress-container {
@@ -624,4 +624,36 @@ body.light {
     .tooltip.bs-tooltip-top .arrow:before {
         border-top-color: $black !important;
     }
+}
+
+.prev-mob-wrp {
+    display: none;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.link-prev-mob {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56%;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    & + .link-prev-mob {
+        margin-top: 40px;
+    }
+}
+.link-prev-mob-text {
+    position: absolute;
+    font-size: 28px;
+    font-family: 'FuturaPT-Demi';
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    left: 0;
+    margin-top: -16px;
+    width: 100%;
+    color: #fff;
 }
