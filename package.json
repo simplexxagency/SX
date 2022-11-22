@@ -9,7 +9,7 @@
   "author": "MarinaT",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.5",
+    "browser-sync": "^2.27.10",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
